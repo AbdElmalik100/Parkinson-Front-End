@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $secondary;
+}
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+input,
+textarea {
+  background: none;
+  outline: none;
+  border: 1px solid $primary;
+  color: $secondary;
+  border-radius: 5px;
+  padding: 8px 20px;
+  width: 100%;
+}
+
+.main-butn {
+  color: $white;
+  border-radius: 5px;
+  background-color: $primary;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 13px 20px;
+  border: none;
+  transition: 0.2s;
+  &:hover {
+    background-color: #3eccf3;
+  }
+}
+
+.second-butn {
+  color: $white;
+  border-radius: 5px;
+  background-color: $secondary;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 13px 20px;
+  border: none;
+  transition: 0.2s;
+  &:hover {
+    background-color: #21218f;
+  }
+}
+
+.get-started {
+  color: $white;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, $secondary, $primary);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 20px;
+  text-align: center;
+  border: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 5px;
+    transition: 0.2s;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.heading {
+  margin: auto;
+  color: $white;
+  position: relative;
+
+  .skew {
+    margin: auto;
+    display: block;
+    background-color: $secondary;
+    width: fit-content;
+    width: 275px;
+    height: 75px;
+    transform: skew(-30deg);
+  }
+
+  h1 {
+    position: absolute;
+    margin-bottom: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 555;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .skew::before,
+  .skew::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    background-color: $primary;
+    top: 0;
+  }
+
+  .skew::before {
+    left: 0;
+  }
+
+  .skew::after {
+    right: 0;
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.2s;
+}
+
+// Toast Custom Style
+.Toastify__toast {
+  background-color: $secondary !important;
+  border-right: 5px solid $primary;
+  font-family: unset;
+}
+
+// Dashboard Global Boxes Settings
+.content {
+  .boxes {
+    .box {
+      background-color: $white;
+      border: 1px solid $primary;
+      position: relative;
+      display: grid;
+      place-items: center;
+      height: 275px;
+      width: 100%;
+      transition: 0.2s;
+
+      &:hover {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .step {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+
+        .number {
+          width: 40px;
+          height: 40px;
+          background-color: $primary;
+          color: $white;
+          display: grid;
+          place-items: center;
+          font-size: 20px;
+          position: relative;
+          z-index: 1;
+        }
+
+        span:last-child {
+          position: absolute;
+          font-weight: 500;
+          top: 50%;
+          transform: translateY(-50%);
+          text-transform: uppercase;
+          font-size: 15px;
+          text-align: center;
+          padding: 3px;
+          left: 20px;
+          width: 125px;
+          border-radius: 50px;
+          background-color: $very-light-grey;
+          color: $black;
+        }
+      }
+
+      .inner {
+        color: $primary;
+
+        span {
+          color: $secondary;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    width: 100% !important;
+    padding: 15px !important;
+    label {
+      padding: 50px 15px !important;
+      img:not(.img-placeholder, .ava) {
+        width: 125px !important;
+      }
+    }
+    form {
+      padding: 1rem !important;
+    }
+  }
+}
+
+.detection-box {
+  &.drag {
+    border-color: $primary;
+    box-shadow: 0 0 35px $primary inset, 0 0 20px $primary;
+  }
+}
+
+// Google Button
+.nsm7Bb-HzV7m-LgbsSe {
+  width: 500px !important;
+}
